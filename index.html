@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Space Journey</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header"></header>
+      <main class="page">
+         <div class="page__video">
+            <video id="video" autoplay muted loop playsinline>
+               <source src="bg_video.mp4">
+            </video>
+         </div>
+         <div class="page__content">
+            <nav class="page__nav nav-page">
+               <a href="" class="nav-page__link">Главная</a>
+               <a href="" class="nav-page__link">Возможное наличие жизни</a>
+               <a href="" class="nav-page__link">Портфолио</a>
+            </nav>
+            <div class="swiper-container page__sl sl-page">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide sl-page__slide sl-page__slide_1">
+
+                     <div class="page__header">
+                        <h1 class="page__title">Виберите транспорт</h1>
+                     </div>
+                     <div class="page__slider slider swiper-container">
+                        <div class="swiper-wrapper">
+                           <div class="slider__slide slide swiper-slide" speed="692000">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/parker.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Parker</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="265500">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/Juno.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Juno</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="173800">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/galileo.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Galileo</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="162000">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/horizons.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">New Horizons</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="132000">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/pioneer_10.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Pioneer-10</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="60000">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/vojager1.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Voyager-1</h2>
+                              </div>
+                           </div>
+                           <div class="slider__slide slide swiper-slide" speed="54000">
+                              <div class="slide__body">
+                                 <div class="slide__img">
+                                    <img class="slide__images" src="img/cassini.jpg" alt="">
+                                 </div>
+                                 <h2 class="slide__title">Cassini</h2>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="page__info info-page">
+                        <div class="container">
+                           <div class="info-page__body">
+                              <div class="info-page__content">
+                                 <div class="info-page__choise">
+                                    <div class="info-page__label">Введите расстояние <span>( в световых годах
+                                          )</span>
+                                    </div>
+                                    <div class="info-page__input">
+                                       <input type="number" class="info-page__number">
+                                       <button type="submit" class="info-page__btn">Рассчитать</button>
+                                    </div>
+                                 </div>
+                                 <div class="info-page__result result-info">
+                                    <div class="result-info__body">
+                                       <div class="result-info__column result-info__column_img">
+                                          <div class="result-info__img">
+                                             <img class="result-info__images" src="" alt="">
+                                             <p class="result-info__title"></p>
+                                          </div>
+                                       </div>
+                                       <div class="result-info__column result-info__column_text">
+                                          <div class="result-info__departure">
+                                             <div class="result-info__label">Дата отправления <span>(день, месяц,
+                                                   год)</span>
+                                             </div>
+                                             <div class="result-info__text result-info__text_derapture"></div>
+                                          </div>
+                                          <div class="result-info__destination">
+                                             <div class="result-info__label">Дата прибытия <span>(день, месяц,
+                                                   год)</span>
+                                             </div>
+                                             <div class="result-info__text result-info__text_destination">14 apr 2050
+                                             </div>
+                                          </div>
+                                          <div class="result-info__total">
+                                             <div class="result-info__distance">
+                                                <div class="result-info__label">Расстояние <span>(световых
+                                                      лет)</span>
+                                                </div>
+                                                <div class="result-info__text result-info__distance_total"></div>
+                                             </div>
+                                             <div class="result-info__time">
+                                                <div class="result-info__label result-info__label_time">Время в пути
+                                                </div>
+                                                <div class="result-info__text result-info__text_total"></div>
+                                             </div>
+                                          </div>
+                                          <button class="result-info__btn">Сбросить</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="swiper-slide sl-page__slide">
+                     <div class="sl-page__content sl-content">
+                        <div class="page__header page__header_2">
+                           <h2 class="page__title">Возможное наличие жизни</h2>
+                        </div>
+                        <div class="container sl-content-container">
+
+                           <div class="sl-content__body swiper-container">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide sl-content__slide">
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Kepler-186 f</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/planet/Kepler186f.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Это первая планета с радиусом, близким к земному, обнаруженная в
+                                                   обитаемой зоне другой звезды. исследования показали, что Кеплер-186f
+                                                   может иметь сезоны и климат, подобные земным. Это существенно
+                                                   повышает
+                                                   шансы на обитаемость планеты и её сходство с Землёй.
+
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 492 св. года</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">KOI-3010.01</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/planet/KOI-3010.01.jpeg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Температура на этой экзопланете предположительно составляет около
+                                                   19,6 ° С (292,75 К), её химический состав почти такой же, как у
+                                                   Земли. Учёные предполагают, что она пригодна для жизни, потому что на
+                                                   ней предположительно есть умеренный климат, как на Земле. Она имеет
+                                                   радиус около 1,35 радиуса Земли. Атмосферный состав пока
+                                                   неизвестен. Масса этой экзопланеты также остаётся спорной.
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 1213 св. лет</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Глизе 667 C</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/planet/Gliese_667.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Планета обращается вокруг красного карлика Глизе 667 C на расстоянии
+                                                   0,12 а.е., её орбитальный период составляет 28,1 ± 0,5 земных суток.
+                                                   Минимальная масса планеты — 3,8 масс Земли. С учётом того, что радиус
+                                                   эффективной земной орбиты в этой системе составляет всего 0.114 а.е.,
+                                                   температурный режим планеты возможно очень близок к температурному
+                                                   режиму Земли. Моделирование Лаборатории жизнепригодности планет при
+                                                   Университете Пуэрто-Рико в Аресибо показывает, что средняя
+                                                   приповерхностная температура атмосферы будет составлять около 300 К
+                                                   (27 °C) в случае, если планета имеет атмосферу, подобную земной, с
+                                                   парниковым эффектом за счёт наличия 1 % СО2 и при альбедо 0,3.
+                                                   Эффективная температура согласно расчётам составит 246 К (-27 °C) при
+                                                   альбедо как у Земли (0,36). Для сравнения: эффективная температура
+                                                   Земли 249 К, или −24 °C. Планета получает около 90 % той энергии, что
+                                                   получает Земля от Солнца. Почти наверняка планета находится в
+                                                   приливном захвате, то есть повёрнута к своей звезде только одной
+                                                   стороной. Если наклонение её орбиты не слишком мало и,
+                                                   соответственно, масса не слишком велика, то парниковый эффект,
+                                                   создаваемый достаточно плотной атмосферой, вполне возможно создаёт на
+                                                   поверхности планеты достаточно комфортные условия для существования
+                                                   примитивных форм жизни.
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 22,7 св. лет</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Kepler-62e</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/planet/Kepler-62f.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Четвёртая по удалённости экзопланета, обнаруженная у звезды
+                                                   Kepler-62, находящейся в созвездии Лиры. Она вместе с планетой
+                                                   Kepler-62 f может быть обитаемой. Она в полтора раза больше Земли,
+                                                   значит может удержать атмосферу. Учёные предполагают, что эта планета
+                                                   может быть полностью покрыта океаном. Если смотреть эффективную
+                                                   земную орбиту звезды Kepler-62, то эта планета всего на 7% ближе к
+                                                   своей звезде, чем Земля[2]. Однако, если учесть коэффициент
+                                                   температуры звезды (которая на 9% ниже температуры на Солнце) и 7-ми
+                                                   процентную разность расстояний с эффективной земной орбитой, то
+                                                   получается, что при атмосферном давлении 100 кПа её средняя
+                                                   температура будет составлять примерно 17 градусов по Цельсию, т. е.
+                                                   она будет являться «курортом с вечной весной», средняя температура на
+                                                   её поверхности будет на 16% выше, чем средняя температура на Земле
+                                                   (15 °C). Но если плотность её атмосферы будет такая же, как у Земли,
+                                                   то на ней не будет полярных шапок, возможно, её будет окутывать
+                                                   стокилометровый слой воды (гидросфера). Из-за этого на ней будет
+                                                   большой парниковый эффект. Чтобы быть главным претендентом на звание
+                                                   «Земля 2.0», она должна иметь атмосферу, которая на 3—4% менее
+                                                   плотная, нежели земная, т. к. это довольно значительная разница, и
+                                                   при этом на ней должно быть хотя бы 15% суши, иначе она будет
+                                                   термопланетой-океаном с парниковой атмосферой, и её средняя
+                                                   температура будет значительно выше, чем 17 °C (около 25 °C,
+                                                   Гибралтар, Марокко, т. е. полупустыня). Но даже при неблагоприятном
+                                                   стечении обстоятельств в её сверхокеане будут почти идеальные условия
+                                                   для существования подводной жизни. И при этом вероятность зарождения
+                                                   на этой планете хотя бы одноклеточных организмов равна примерно
+                                                   70—80%, так как для этого существуют все необходимые условия. Также
+                                                   на это указывает высокое значение индекса ESI, равное 0.86. При
+                                                   температуре ~114 °C возле экватора никакой жизни не будет нигде,
+                                                   кроме полюсов. Если на этой планете есть наклон оси, это позволит
+                                                   организмам находиться в зимнем полушарии и кочевать (перелетать) в
+                                                   другое, если становится жарко. Главное, чтобы наклон не был слишком
+                                                   большим, иначе в процессе перехода животным придётся преодолевать
+                                                   слишком широкий жаркий пояс освещённости.
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 1200 св. лет</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide sl-content__slide">
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Планета X</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/parker.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quo
+                                                   earum
+                                                   sit
+                                                   praesentium officia harum magnam quis quisquam mollitia neque
+                                                   laudantium,
+                                                   ipsa
+                                                   reiciendis incidunt, beatae quaerat provident dolor, obcaecati
+                                                   doloribus!
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 492 св. года</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Планета X</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/parker.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quo
+                                                   earum
+                                                   sit
+                                                   praesentium officia harum magnam quis quisquam mollitia neque
+                                                   laudantium,
+                                                   ipsa
+                                                   reiciendis incidunt, beatae quaerat provident dolor, obcaecati
+                                                   doloribus!
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 492 св. года</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Планета X</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/parker.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quo
+                                                   earum
+                                                   sit
+                                                   praesentium officia harum magnam quis quisquam mollitia neque
+                                                   laudantium,
+                                                   ipsa
+                                                   reiciendis incidunt, beatae quaerat provident dolor, obcaecati
+                                                   doloribus!
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 492 св. года</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="sl-content__item item-sl-content">
+                                       <div class="item-sl-content__body">
+                                          <div class="item-sl-content__title">Планета X</div>
+                                          <div class="item-sl-content__row">
+                                             <div class="item-sl-content__img">
+                                                <img src="img/parker.jpg" alt="">
+                                             </div>
+                                             <div class="item-sl-content__text">
+                                                <p>
+                                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quo
+                                                   earum
+                                                   sit
+                                                   praesentium officia harum magnam quis quisquam mollitia neque
+                                                   laudantium,
+                                                   ipsa
+                                                   reiciendis incidunt, beatae quaerat provident dolor, obcaecati
+                                                   doloribus!
+                                                </p>
+                                                <span class="item-sl-content__btn">далее</span>
+                                                <span class="item-sl-content__dist">Расстояние: 492 св. года</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-pagination sl-content__pagination"></div>
+                              <div class="sl-content__arrow">
+                                 <div class="sl-content__prev">
+                                    <svg>
+                                       <use xlink:href="img/sprite.svg#svg--prev-arrow"></use>
+                                    </svg>
+                                 </div>
+                                 <div class="sl-content__next">
+                                    <svg>
+                                       <use xlink:href="img/sprite.svg#svg--next-arrow"></use>
+                                    </svg>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sl-content__result result-content">
+                        <div class="result-content__title"></div>
+                        <div class="result-content__body">
+
+                           <div class="result-content__img">
+                              <img src="" alt="">
+                           </div>
+                           <div class="result-content__text">
+                              <p class="result-content__description"></p>
+                              <p class="result-content__distance"></p>
+                           </div>
+                           <div class="result-content__close">
+                              <svg>
+                                 <use xlink:href="img/sprite.svg#svg--close"></use>
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide sl-page__slide">
+                     <div class="sl-page__content sl-content">
+                        <div class="page__header page__header_3">
+                           <h2 class="page__title">Портфолио</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+            <div class="swiper-pagination sl-page__pagination"></div>
+
+         </div>
+   </div>
+   </main>
+   <footer class="footer"></footer>
+   </div>
+
+
+   <script src="js/vendors.min.js"></script>
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>
